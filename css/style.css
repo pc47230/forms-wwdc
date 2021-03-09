@@ -1,0 +1,467 @@
+/**
+ * style.css
+ *
+ * These are the styles.
+ *
+ * Index
+ * - GLOBAL
+ * - INPUTS
+ * - BUTTONS
+ * - MEDIA QUERIES
+ */
+
+
+/*** GLOBAL ***/
+body {
+	font-family: 'Titillium Web', sans-serif;
+	background: url('../img/background.jpg') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+h1 {
+	font-size: 1.9em;
+	color: #fff;
+	text-shadow: 1px 1px #000;
+	word-spacing: 0.35em;
+}
+.register h1 {
+	padding-left: 170px;
+}
+.send-email h1 {
+	padding-top: 20px;
+	padding-left: 188px;
+}
+.sign-in h1 {
+	padding-left: 150px;
+}
+.recover h1 {
+	padding-top: 4px;
+	padding-left: 152px;
+}
+.subscribe h1 {
+	padding-top: 14px;
+	padding-left: 134px;
+}
+.container {
+	max-width: 1046px;
+	margin: 88px auto 36px auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.register__wrapper form, .send-email__wrapper form, .sign-in__wrapper form, .recover__wrapper form, .subscribe__wrapper form {
+	background: #f4f4f4;
+	border-radius: 5px;
+	-webkit-background-clip: content-box; /* for Safari */
+    background-clip: content-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+.register__wrapper, .send-email__wrapper {
+	margin: 24px 40px 22px 64px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, .5);
+	border: 18px solid rgba(0, 0, 0, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.sign-in__wrapper, .recover__wrapper  {
+	margin: 24px 58px 22px 42px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, .5);
+	border: 18px solid rgba(0, 0, 0, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+.subscribe__wrapper {
+	margin: 14px 58px 22px 42px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, .5);
+	border: 18px solid rgba(0, 0, 0, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+
+
+/*** INPUTS ***/
+.username, .password, .confirm__password, .email, .location, .name, .your__email, .username__sign, .password__sign, .your__email__recover, .phone, .your__email__subscribe  {
+	display: flex;
+	flex-direction:row;
+}
+.sign-in__flex-column, .subscribe__submit {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 6px;
+}
+.recover__submit {
+	display: flex;
+	justify-content: space-between;
+}
+.username, .name {
+	padding: 22px;
+}
+.password, .confirm__password, .email, .location, .password__sign, .phone {
+	padding: 0 22px 20px 22px;
+}
+.username__sign, .your__email__recover {
+	padding: 32px 22px 20px 22px;
+}
+.your__email__subscribe  {
+	padding: 26px 22px 20px 22px;
+}
+.your__email {
+	padding: 0 22px 14px 22px;
+}
+.location, .message {
+	padding: 0 22px 10px 22px;
+}
+.register .checkbox {
+	padding-left: 16px;
+} 
+input:not([type="checkbox"]) {
+	border-radius: 4px;
+	border-right: 1px solid #afafaf;
+	border-top: 1px solid #afafaf;
+	border-bottom: 1px solid #afafaf;
+	border-left: none;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	width: 258px;
+	padding-left: 36px;
+	background: #f4f4f4;
+}
+textarea {
+	border-radius: 4px;
+	border: 1px solid #afafaf;
+	background: #f4f4f4;
+	height: 220px;
+	width: 320px;
+	padding-left: 16px;
+	padding-top: 6px;
+	resize: none;
+}
+.icon {
+	display: block;
+  	position: relative;
+	border-radius: 4px;
+	border-left: 1px solid #afafaf;
+	border-top: 1px solid #afafaf;
+	border-bottom: 1px solid #afafaf;
+	border-right: none;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+} 
+.icon:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 75%;
+  top: 12.5%;
+  width: 1px;
+  background-color: #dedede;
+}
+.accept {
+	padding: 6px 0px 8px 8px;
+	font-size: 1.1em;
+	color: #afafaf;
+	word-spacing: 0.1em;
+}
+.copy {
+	padding: 6px 0px 8px 22px;
+	font-size: 1.1em;
+	color: #afafaf;
+	word-spacing: 0.1em;
+}
+#accept, #copy {
+	opacity: 0;
+    width: 1.2em;
+    height: 1.2em;
+}
+.accept, .copy {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-gap: 0.8em;
+}
+.checkbox__control {
+  	display: inline-grid;
+  	width: 1.2em;
+  	height: 1.2em;
+  	border-radius: 3px;
+  	border: 1px solid #afafaf;
+}
+.checkbox__input {
+  	display: grid;
+  	grid-template-areas: 'checkbox';
+  	transform: translateY(-3px);
+}
+.checkbox__input > * {
+	grid-area: checkbox;
+}
+.checkbox__control svg {
+  	transition: transform 0.1s ease-in 25ms;
+  	transform: scale(0);
+  	transform-origin: bottom left;
+}
+
+.checkbox__input input:checked
+ + .checkbox__control svg {
+  transform: scale(1);
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #afafaf;
+  font-size: 1.2em;
+  font-family: 'Titillium Web', sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #afafaf;
+  font-size: 1.2em;
+  font-family: 'Titillium Web', sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #afafaf;
+  font-size: 1.2em;
+  font-family: 'Titillium Web', sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #afafaf;
+  font-size: 1.2em;
+  font-family: 'Titillium Web', sans-serif;
+}
+::placeholder {
+	color: #afafaf;
+  	font-size: 1.2em;
+  	font-family: 'Titillium Web', sans-serif;
+}
+input:focus, textarea:focus {
+    outline-width: 0px;
+    -webkit-text-fill-color: #afafaf;
+    caret-color: #696969;
+    font-family: 'Titillium Web', sans-serif;
+}
+input:-webkit-autofill, textarea:-webkit-autofill {
+    -webkit-text-fill-color: #afafaf;
+    background-color: #dedede;
+    caret-color: #696969;
+    font-family: 'Titillium Web', sans-serif;
+}
+input:-webkit-autofill:focus, textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: #afafaf;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+/*** BUTTONS ***/
+
+
+.register__submit {
+	padding-left: 22px;
+	padding-bottom: 16px;
+}
+
+.send-email__submit {
+	padding-left: 22px;
+	padding-bottom: 24px;
+}
+
+.sign-in__submit {
+	padding-right: 22px;
+	padding-bottom: 24px;
+}
+
+.recover__submit, .subscribe__submit {
+	padding-left: 22px;
+	padding-right: 22px;
+	padding-bottom: 26px;
+}
+
+button {
+	border-radius: 3px;
+	color: #fff;
+	text-shadow: 1px 1px #000;
+	word-spacing: 0.2em;
+	text-align: center;
+}
+
+.register__submit button {
+		
+	border: 1px solid #3c9b01;
+	background-image: linear-gradient(to top, #7fc320, #a3d840);
+	padding: 10px 130px;
+	font-size: 1.4em;
+}
+
+.send-email__submit button {
+	border: 1px solid #3c9b01;
+	background-image: linear-gradient(to top, #7fc320, #a3d840);
+	padding: 10px 110px;
+	font-size: 1.4em;
+}
+
+.sign-in__submit button {
+	border: 1px solid #3c9b01;
+	background-image: linear-gradient(to top, #7fc320, #a3d840);
+	padding: 6px 36px 6px 28px;
+	transform: translateY(-4px);
+	font-size: 1.4em;
+}
+
+.send, .done {
+	border: 1px solid #3c9b01;
+	padding: 10px 52px;
+	transform: translateY(-4px);
+	font-size: 1.1em;
+}
+.subscribe__button {
+	border: 1px solid #3c9b01;
+	padding: 10px 32px;
+	background-image: linear-gradient(to top, #7fc320, #a3d840);
+	font-size: 1.1em;
+}
+.no-thanks__button {
+	border: 1px solid #a2202a;
+	padding: 10px 28px;
+	background-image: linear-gradient(to top, #f03745, #f76e7e);
+	font-size: 1.1em;
+}
+.send {
+	background-image: linear-gradient(to top, #7fc320, #a3d840);
+	border: 1px solid #3c9b01;
+}
+.done {
+	background-image: linear-gradient(to top, #acd183, #c4e0a3);
+	border: 1px solid #acd183;
+}
+
+
+
+ /*** MEDIA QUERIES ***/
+
+
+@media all and (max-width: 1690px) { 
+
+}
+
+@media all and (max-width: 1280px) { 
+
+}
+
+@media all and (max-width: 980px)  { 
+
+.container {
+	max-width: 420px;
+	margin: 40px auto;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+h1 {
+	padding-left: 0px !important;
+	text-align: center;
+}
+
+.register__wrapper, .send-email__wrapper, .sign-in__wrapper, .recover__wrapper, .subscribe__wrapper {
+	margin: 24px auto;
+}
+
+}
+
+@media all and (max-width: 736px)  { 
+
+.container {
+	max-width: 420px;
+	margin: 40px auto;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+h1 {
+	padding-left: 0px !important;
+	text-align: center;
+}
+
+.register__wrapper, .send-email__wrapper, .sign-in__wrapper, .recover__wrapper, .subscribe__wrapper {
+	margin: 24px auto;
+}
+
+}
+
+@media all and (max-width: 480px)  { 
+
+.container {
+	max-width: 322px;
+	margin: 40px auto;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.register__wrapper, .send-email__wrapper, .sign-in__wrapper, .recover__wrapper, .subscribe__wrapper {
+	margin: 24px auto;
+}
+
+h1 {
+	padding-left: 0px !important;
+	text-align: center;
+}
+
+input:not([type="checkbox"]) {
+	width: 184px;
+	padding-left: 10px;
+}
+
+textarea {
+	width: 218px;
+}
+
+.register__submit button {
+	padding: 10px 80px;
+}
+
+.send-email__submit button {
+	padding: 10px 60px;
+}
+
+.sign-in__submit button {
+	padding: 6px 22px;
+}
+
+.send, .done {
+	padding: 10px 22px;
+}
+
+.subscribe__button, .no-thanks__button {
+	padding: 10px 16px;
+}
+
+.register__submit {
+	padding-left: 22px;
+	padding-bottom: 16px;
+}
+
+.send-email__submit {
+	padding-left: 22px;
+	padding-bottom: 24px;
+}
+
+.sign-in__submit {
+	padding-right: 22px;
+	padding-bottom: 24px;
+}
+
+.recover__submit, .subscribe__submit {
+	padding-left: 22px;
+	padding-right: 22px;
+	padding-bottom: 26px;
+}
+
+.checkbox label {
+	font-size: 0.7em;
+}
+
+.checkbox__input {
+  	transform: translateY(-1px);
+}
+
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weekly WebDev Challenge - 1</title>
+<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="col-1">
+		<!-- Register form -->
+			<div class="register">
+				<h1>Register Form</h1>
+				<div class="register__wrapper">
+					<form class="register__form">
+						<div class="username">
+							<div class="icon">
+								<img src="img/icon-user.png" alt="">
+							</div>
+							<input type="text" id="username" name="username" placeholder="Username">
+						</div>
+						<div class="password">
+							<div class="icon">
+								<img src="img/icon-lock.png" alt="">
+							</div>
+							<input type="password" id="passsword" name="password" placeholder="Password">
+						</div>
+						<div class="confirm__password">
+							<div class="icon">
+								<img src="img/icon-lock.png" alt="">
+							</div>
+							<input type="password" id="confirm__passsword" name="confirm__password" placeholder="Confirm Password">
+						</div>
+						<div class="email">
+							<div class="icon">
+								<img src="img/icon-email.png" alt="">
+							</div>
+							<input type="email" id="email" name="email" placeholder="Email">
+						</div>
+						<div class="location">
+							<div class="icon">
+								<img src="img/icon-location.png" alt="">
+							</div>
+							<input type="text" id="location" name="location" placeholder="Your Location">
+						</div>
+						<div class="checkbox">
+    						<label class="accept">
+  									<span class="checkbox__input">
+    							<input id="accept" type="checkbox" name="accept" checked>
+    								<span class="checkbox__control">
+    									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' aria-hidden="true" focusable="false">
+        								<rect fill="#8ccb18" x="5" y="5" width="10" height="10" rx="2" />
+    								</span>
+  								</span>
+  									<span class="radio__label">I have read and accept the term of use.</span>
+							</label>
+						</div>
+  						<div class="register__submit">
+    						<button type="submit">Sign up</button>
+  						</div>
+					</form>
+				</div>
+			</div>
+		<!-- Send Email form -->
+			<div class="send-email">
+				<h1>Send Email</h1>
+				<div class="send-email__wrapper">
+					<form class="send-email__form">
+						<div class="name">
+								<div class="icon">
+								<img src="img/icon-user.png" alt="">
+							</div>
+							<input type="text" id="name" name="name" placeholder="Your Name">
+						</div>
+						<div class="your__email">
+							<div class="icon">
+								<img src="img/icon-email.png" alt="">
+							</div>
+							<input type="email" id="your__email" name="your__email" placeholder="Your Email">
+						</div>
+						<div class="message">
+							<textarea placeholder="Type your message ..."></textarea>
+						</div>
+  							<div class="checkbox">
+    						<label class="copy">
+  									<span class="checkbox__input">
+    							<input id="copy" type="checkbox" name="copy" checked>
+    								<span class="checkbox__control">
+    									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' aria-hidden="true" focusable="false">
+        								<rect fill="#8ccb18" x="5" y="5" width="10" height="10" rx="2" />
+    								</span>
+  								</span>
+  									<span class="radio__label">Send a copy to my Email</span>
+							</label>
+						</div>
+  						<div class="send-email__submit">
+    						<button type="submit">Send Email</button>
+  						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-2">
+			<div class="sign-in">
+		<!-- Sign In form -->
+				<h1>Sign In Form</h1>
+				<div class="sign-in__wrapper">
+					<form class="sign-in__form">
+						<div class="username__sign">
+							<div class="icon">
+								<img src="img/icon-user.png" alt="">
+							</div>
+							<input type="text" id="username__sign" name="username__sign" placeholder="Username">
+						</div>
+						<div class="password__sign">
+							<div class="icon">
+								<img src="img/icon-lock.png" alt="">
+							</div>
+							<input type="text" id="password__sign" name="password__sign" placeholder="Password">
+						</div>
+						<div class="sign-in__flex-column">
+							<div class="remember">
+    							<div class="checkbox">
+    								<label class="copy">
+  									<span class="checkbox__input">
+    									<input id="copy" type="checkbox" name="copy" checked>
+    								<span class="checkbox__control">
+    									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' aria-hidden="true" focusable="false">
+        								<rect fill="#8ccb18" x="5" y="5" width="10" height="10" rx="2" />
+    								</span>
+  								</span>
+  									<span class="radio__label">Remember me</span>
+									</label>
+								</div>
+  							</div>
+  							<div class="sign-in__submit">
+    							<button type="submit">Sign in</button>
+  							</div>
+  						</div>
+					</form>
+				</div>
+			</div>
+			<div class="recover">
+		<!-- Recover form -->
+				<h1>Recover Form</h1>
+				<div class="recover__wrapper">
+					<form class="recover__form">
+						<div class="your__email__recover">
+							<div class="icon">
+								<img src="img/icon-email.png" alt="">
+							</div>
+							<input type="email" id="your__email__recover" name="your__email__recover" placeholder="Enter your Email">
+						</div>
+						<div class="phone">
+							<div class="icon">
+								<img src="img/icon-phone.png" alt="">
+							</div>
+							<input type="phone" id="phone" name="phone" placeholder="Enter your Phone number">
+						</div>
+						<div class="recover__submit">
+    						<button class="send" type="submit">Send</button>
+    						<button class="done" type="submit" disabled>Done</button>
+  						</div>
+					</form>
+				</div>	
+			</div>
+			<div class="subscribe">
+		<!-- Subscribe form -->				
+				<h1>Subscribe Form</h1>
+				<div class="subscribe__wrapper">
+					<form class="subscribe__form">
+						<div class="your__email__subscribe">
+							<div class="icon">
+								<img src="img/icon-email.png" alt="">
+							</div>
+							<input type="email" id="your__email__subscribe" name="your__email__subscribe" placeholder="Enter your Email">
+						</div>
+						<div class="subscribe__submit">
+							<button class="subscribe__button" type="submit">Subscribe</button>
+    						<button class="no-thanks__button" type="submit">No, Thanks</button>
+    					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
